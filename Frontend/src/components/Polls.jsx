@@ -9,7 +9,7 @@ function Polls() {
     useEffect(() => {
         const fetchPolls = async () => {
             try {
-                const response = await axios.get('/polls', {
+                const response = await api.get('/polls', {
                     headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
                 });
                 console.log('API Response:', response.data); // Log the response data
